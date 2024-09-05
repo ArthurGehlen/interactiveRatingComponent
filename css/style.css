@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  background-color: hsl(213, 19%, 18%);
+  height: 410px;
+  width: 410px;
+  padding: 35px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsla(217, 12%, 63%, 0.1);
+}
+body main .description {
+  height: 110px;
+  width: 350px;
+  line-height: 27px;
+  border: 1px solid white;
+}
+body main .description h1 {
+  color: hsl(0, 0%, 100%);
+}
+body main .description p {
+  color: hsl(217, 12%, 63%);
+}
+body main .rating_container {
+  border: 1px solid white;
+  height: 60px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .rating_container .item {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background-color: hsla(217, 12%, 63%, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(217, 12%, 63%);
+}
+body main .rating_container .item:hover {
+  color: hsl(213, 19%, 18%);
+  background-color: hsl(25, 97%, 53%);
+}
+body main button {
+  cursor: pointer;
+  width: 350px;
+  height: 45px;
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+}
+body main button:hover {
+  background-color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=style.css.map */
