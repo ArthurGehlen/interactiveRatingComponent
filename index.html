@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!--Windows Cover-->
-  <link rel="stylesheet" href="windowCover/style.css">
+  <!-- <link rel="stylesheet" href="windowCover/style.css"> -->
 
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 
 <body>
 
-  <main>
+  <main id="main_container">
     <div class="star">
-      <img src="images/icon-star.svg" alt="" width="15px" height="15px">
+      <img src="images/icon-star.svg" alt="" width="20px" height="20px">
     </div>
 
     <div class="description">
@@ -30,21 +30,11 @@
     </div>
 
     <div class="rating_container">
-      <div class="item">
-        <p>1</p>
-      </div>
-      <div class="item">
-        <p>2</p>
-      </div>
-      <div class="item">
-        <p>3</p>
-      </div>
-      <div class="item">
-        <p>4</p>
-      </div>
-      <div class="item">
-        <p>5</p>
-      </div>
+      <button class="item" id="btn_rating_one">1</button>
+      <button class="item" id="btn_rating_two">2</button>
+      <button class="item" id="btn_rating_three">3</button>
+      <button class="item" id="btn_rating_four">4</button>
+      <button class="item" id="btn_rating_five">5</button>
     </div>
 
     <div class="button_container">
@@ -54,7 +44,27 @@
     </div>
   </main>
 
-  <script src="windowCover/script.js"></script>
+  <div id="thank_container">
+    <div class="image">
+      <img src="images/illustration-thank-you.svg" width="160px" height="110px">
+      <p id="rating_number">
+        You selected 0 out of 5
+      </p>
+    </div>
+
+    <div class="text">
+      <h2>
+        Thank you!
+      </h2>
+
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don't hesitate to get in touch!
+      </p>
+    </div>
+  </div>
+
+  <!-- <script src="windowCover/script.js"></script> Windows Cover-->
   <script src="script.js"></script>
 </body>
 

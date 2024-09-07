@@ -14,35 +14,28 @@ p {
 body {
     background-color: $body_bg_color;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display(flex, center, center, none);
 
     main {
         background-color: $main_bg_color;
         height: 410px;
         width: 410px;
-        padding: 35px;
+        padding: 30px;
         border-radius: 25px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        @include display(flex, space-between, none, column);
 
         .star {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display(flex, center, center, none);
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: $item_bg_color    ;
+            background-color: $item_bg_color;
         }
 
         .description {
-            height: 110px;
+            height: 100px;
             width: 350px;
             line-height: 27px;
-            border: 1px solid white;
 
             h1 {
                 color: $white;
@@ -54,11 +47,9 @@ body {
         }
 
         .rating_container {
-            border: 1px solid white;
             height: 60px;
             width: 350px;
-            display: flex;
-            justify-content: space-between;
+            @include display(flex, space-between, none, none);
 
             .item {
                 cursor: pointer;
@@ -66,13 +57,16 @@ body {
                 height: 55px;
                 background-color: $item_bg_color;
                 border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include display(flex, center, center, none);
                 color: $p_color;
 
+                &:focus {
+                    background-color: $white;
+                    color: $body_bg_color;
+                }   
+
                 &:hover {
-                    color: $main_bg_color;
+                    color: $body_bg_color;
                     background-color: $item_hover_bg_color;
                 }
             }
@@ -84,14 +78,64 @@ body {
             height: 45px;
             background-color: $item_hover_bg_color;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
             border-radius: 20px;
             border: none;
             font-weight: 700;
+            font-size: 15px;
 
             &:hover {
                 background-color: $white;
             }
         }
     }
+
+    #thank_container {
+        background-color: $main_bg_color;
+        height: 410px;
+        width: 410px;
+        padding: 30px;
+        border-radius: 25px;
+        @include display(none, none, none, column);
+
+        .image {
+            height: 245px;
+            @include display(flex, space-around, center, column);
+
+            p {
+                background-color: $item_bg_color;
+                color: $item_hover_bg_color;
+                height: 35px;
+                width: 200px;
+                border-radius: 20px;
+                @include display(flex, center, center, none);
+            }
+        }
+
+        .text {
+            height: 165px;
+            @include display(flex, center, center, column);
+            gap: 10px;
+
+            h2 {
+                font-size: 30px;
+                color: $white;
+            }
+
+            p {
+                color: $p_color;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Classe criada para facilitar a remoção de elementos da página
+.hide {
+    display: none !important;
+}
+
+// Classe criada para facilitar a adição de elementos da página
+.show {
+    display: flex !important;
 }

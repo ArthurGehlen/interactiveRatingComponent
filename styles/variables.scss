@@ -12,4 +12,12 @@ $main_bg_color: hsl(213, 19%, 18%);
 $p_color: hsl(217, 12%, 63%);
 
 $item_hover_bg_color: hsl(25, 97%, 53%);
-$item_bg_color: hsla(217, 12%, 63%, 0.100);
+$item_bg_color: hsla(217, 12%, 63%, 0.050);
+
+// Mixin criada para diminuir o código
+@mixin display($display, $justify_content, $align_itens, $flex_direction) {
+    display: $display;
+    justify-content: $justify_content;
+    align-items: $align_itens;
+    flex-direction: $flex_direction;
+}
